@@ -1,9 +1,99 @@
 import 'package:flutter/material.dart';
 
+import './widgets/chat_list.dart';
+import './widgets/nav_bar.dart';
+
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+
+  final _messagesData = const [
+    {
+      'userName': 'Артур',
+      'lastMessageTime': '12:54 PM',
+      'lastMessage': 'Дякую!',
+      'unreadNumber': '2',
+      'iconName': 'matt.jpg',
+    },
+    {
+      'userName': 'Flutter chatik',
+      'lastMessageTime': '10:15 AM',
+      'lastMessage': 'Ihor: Скинь посилання',
+      'unreadNumber': '127',
+      'iconName': 'flutter.jpg',
+    },
+    {
+      'userName': 'ІС0X Теорія розкладів',
+      'lastMessageTime': '09:48 AM',
+      'lastMessage': 'Михайло: А нашо нам це вчить?',
+      'unreadNumber': '5',
+      'iconName': 'tr.png',
+    },
+    {
+      'userName': 'ІС0X Теорія розкладів',
+      'lastMessageTime': '09:48 AM',
+      'lastMessage': 'Михайло: А нашо нам це вчить?',
+      'unreadNumber': '5',
+      'iconName': 'tr.png',
+    },
+    {
+      'userName': 'ІС0X Теорія розкладів',
+      'lastMessageTime': '09:48 AM',
+      'lastMessage': 'Михайло: А нашо нам це вчить?',
+      'unreadNumber': '5',
+      'iconName': 'tr.png',
+    },
+    {
+      'userName': 'ІС0X Теорія розкладів',
+      'lastMessageTime': '09:48 AM',
+      'lastMessage': 'Михайло: А нашо нам це вчить?',
+      'unreadNumber': '5',
+      'iconName': 'tr.png',
+    },
+    {
+      'userName': 'ІС0X Теорія розкладів',
+      'lastMessageTime': '09:48 AM',
+      'lastMessage': 'Михайло: А нашо нам це вчить?',
+      'unreadNumber': '5',
+      'iconName': 'tr.png',
+    },
+    {
+      'userName': 'ІС0X Теорія розкладів',
+      'lastMessageTime': '09:48 AM',
+      'lastMessage': 'Михайло: А нашо нам це вчить?',
+      'unreadNumber': '5',
+      'iconName': 'tr.png',
+    },
+    {
+      'userName': 'ІС0X Теорія розкладів',
+      'lastMessageTime': '09:48 AM',
+      'lastMessage': 'Михайло: А нашо нам це вчить?',
+      'unreadNumber': '5',
+      'iconName': 'tr.png',
+    },
+    {
+      'userName': 'ІС0X Теорія розкладів',
+      'lastMessageTime': '09:48 AM',
+      'lastMessage': 'Михайло: А нашо нам це вчить?',
+      'unreadNumber': '5',
+      'iconName': 'tr.png',
+    },
+    {
+      'userName': 'ІС0X Теорія розкладів',
+      'lastMessageTime': '09:48 AM',
+      'lastMessage': 'Михайло: А нашо нам це вчить?',
+      'unreadNumber': '5',
+      'iconName': 'tr.png',
+    },
+    {
+      'userName': 'ІС0X Теорія розкладів',
+      'lastMessageTime': '09:48 AM',
+      'lastMessage': 'Михайло: А нашо нам це вчить?',
+      'unreadNumber': '5',
+      'iconName': 'tr.png',
+    },
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +103,6 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           elevation: 1.5,
           backgroundColor: const Color.fromARGB(255, 59, 134, 187),
-          leading: const Icon(Icons.menu),
           title: const Text(
             'Telegram',
             style: TextStyle(
@@ -27,64 +116,9 @@ class MyApp extends StatelessWidget {
             ),
           ],
         ),
-        body: ListTile(
-          contentPadding: const EdgeInsets.only(top: 10, left: 10),
-          leading: const CircleAvatar(
-            radius: 30,
-          ),
-          title: Padding(
-            padding: const EdgeInsets.only(right: 10),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
-                Text(
-                  'Arthur',
-                  style: TextStyle(
-                    fontWeight: FontWeight.w500,
-                    fontSize: 19,
-                  ),
-                ),
-                Text(
-                  '12:56 PM',
-                  style: TextStyle(
-                    fontSize: 14,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          subtitle: Padding(
-            padding: const EdgeInsets.only(right: 10),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                const Text(
-                  'How are you?',
-                  style: TextStyle(
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-                Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 6.5,
-                    vertical: 2,
-                  ),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(40),
-                    color: Colors.grey,
-                  ),
-                  child: const Text(
-                    '5',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w500,
-                      fontSize: 15,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
+        drawer: const NavBar(),
+        body: ChatList(
+          messagesData: _messagesData,
         ),
       ),
       debugShowCheckedModeBanner: false,
