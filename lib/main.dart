@@ -29,70 +29,7 @@ class MyApp extends StatelessWidget {
       'lastMessage': 'Михайло: А нашо нам це вчить?',
       'unreadNumber': '5',
       'iconName': 'tr.png',
-    },
-    {
-      'userName': 'ІС0X Теорія розкладів',
-      'lastMessageTime': '09:48 AM',
-      'lastMessage': 'Михайло: А нашо нам це вчить?',
-      'unreadNumber': '5',
-      'iconName': 'tr.png',
-    },
-    {
-      'userName': 'ІС0X Теорія розкладів',
-      'lastMessageTime': '09:48 AM',
-      'lastMessage': 'Михайло: А нашо нам це вчить?',
-      'unreadNumber': '5',
-      'iconName': 'tr.png',
-    },
-    {
-      'userName': 'ІС0X Теорія розкладів',
-      'lastMessageTime': '09:48 AM',
-      'lastMessage': 'Михайло: А нашо нам це вчить?',
-      'unreadNumber': '5',
-      'iconName': 'tr.png',
-    },
-    {
-      'userName': 'ІС0X Теорія розкладів',
-      'lastMessageTime': '09:48 AM',
-      'lastMessage': 'Михайло: А нашо нам це вчить?',
-      'unreadNumber': '5',
-      'iconName': 'tr.png',
-    },
-    {
-      'userName': 'ІС0X Теорія розкладів',
-      'lastMessageTime': '09:48 AM',
-      'lastMessage': 'Михайло: А нашо нам це вчить?',
-      'unreadNumber': '5',
-      'iconName': 'tr.png',
-    },
-    {
-      'userName': 'ІС0X Теорія розкладів',
-      'lastMessageTime': '09:48 AM',
-      'lastMessage': 'Михайло: А нашо нам це вчить?',
-      'unreadNumber': '5',
-      'iconName': 'tr.png',
-    },
-    {
-      'userName': 'ІС0X Теорія розкладів',
-      'lastMessageTime': '09:48 AM',
-      'lastMessage': 'Михайло: А нашо нам це вчить?',
-      'unreadNumber': '5',
-      'iconName': 'tr.png',
-    },
-    {
-      'userName': 'ІС0X Теорія розкладів',
-      'lastMessageTime': '09:48 AM',
-      'lastMessage': 'Михайло: А нашо нам це вчить?',
-      'unreadNumber': '5',
-      'iconName': 'tr.png',
-    },
-    {
-      'userName': 'ІС0X Теорія розкладів',
-      'lastMessageTime': '09:48 AM',
-      'lastMessage': 'Михайло: А нашо нам це вчить?',
-      'unreadNumber': '5',
-      'iconName': 'tr.png',
-    },
+    }
   ];
 
   @override
@@ -119,6 +56,12 @@ class MyApp extends StatelessWidget {
         drawer: const NavBar(),
         body: ChatList(
           messagesData: _messagesData,
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          backgroundColor: Colors.blue.shade500,
+          child: const Icon(Icons.edit),
         ),
       ),
       debugShowCheckedModeBanner: false,
