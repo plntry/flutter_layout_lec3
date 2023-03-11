@@ -116,11 +116,7 @@ class MyApp extends StatelessWidget {
             ),
           ],
         ),
-        drawer: const NavBar(
-          'oksana nedilko',
-          '+380 (66) 336 69 21',
-          'userphoto.jpg',
-        ),
+        drawer: const NavBar(),
         body: ChatList(
           messagesData: _messagesData,
         ),
